@@ -76,12 +76,6 @@ ELSE 'Movie'
 END;
 ```
 
-### Output:
-
-![Imported Data](https://github.com/ezrany/MyNetflixData/blob/main/MySQL%20Workbench%20Images/ImportedNetlixData.png)
-
-
-
 I also added a new column for runtime, using an average runtime of 101 minutes for movies and 42 minutes for TV shows, as I didn't have an exact runtime for each program. I used the following code to create and populate the column:
 
 ```sql
@@ -98,6 +92,10 @@ WHEN category = 'Movie' THEN 101
 ELSE NULL
 END;
 ```
+
+### Output:
+
+![Imported Data](https://github.com/ezrany/MyNetflixData/blob/main/MySQL%20Workbench%20Images/Additional%20Columns.png)
 
 After preparing the data, I conducted some analysis. To see which category I watched the most, I used the following code:
 
