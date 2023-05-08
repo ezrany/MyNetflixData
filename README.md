@@ -107,7 +107,7 @@ ORDER BY Count DESC;
 ```
 
 This showed that I watched more TV shows than movies on Netflix:
-https://github.com/ezrany/MyNetflixData/blob/main/MySQL%20Workbench%20Images/WatchTimeByYear.png
+![Imported Data](https://github.com/ezrany/MyNetflixData/blob/main/MySQL%20Workbench%20Images/WatchTimeByCategory.png)
 
 
 I also wanted to see if my viewing trend had decreased over time. To do this, I used the following code:
@@ -119,6 +119,10 @@ FROM watch_history
 GROUP BY YEAR(date)
 ORDER BY year;
 ```
+![Imported Data](https://github.com/ezrany/MyNetflixData/blob/main/MySQL%20Workbench%20Images/WatchTimeByYear.png)
 
-The outcome showed a declining viewing trend since the high viewing figures of 2020 and 2021. Perhaps it's time to cancel my subscription.
+The outcome showed a declining viewing trend since the high viewing figures of 2020 and 2021. 
+
+
+##Perhaps it's time to cancel my subscription!.
 
