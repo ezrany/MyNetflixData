@@ -25,14 +25,14 @@ Maybe I should cancel my subscription.
 
 The first step was to import the data into MySQL. I created a new Schema called 'MyNetflixData' and within that schema, I created a new table called 'watchhistory' to store my data.
 
-However, the data provided by Netflix is quite limited, as they only give you the title of the program and the date it was watched. I needed each movie to have a unique reference, so I created a new column called 'ID' using the auto-increment function and used it as the primary key. To do this, I used the following code:
+However, the data provided by Netflix is quite limited, as they only give you the title of the program and the date it was watched. I needed each movie to have a unique reference, so I created a new column called 'ID' using ALTER TABLE and added a unique id that will also function as a primary key using the  the AUTO-INCREMENT function:
 
 ```sql
 ALTER TABLE watch_history
 ADD COLUMN id INT NOT NULL auto_increment PRIMARY KEY;
 ```
 
-To expand the dataset, I added a new column called 'category.' I set the parameters for this column to classify titles containing 'series,' 'chapter,' 'season,' 'part,' or 'episode' as TV shows, and everything else as a movie. To create a new column and populate it, I used the following codes:
+To expand the dataset, I added a new column called 'category.' I set the parameters for this column to classify titles containing 'series,' 'chapter,' 'season,' 'part,' or 'episode' as TV shows, and everything else as a movie. To create a new column and populate it, I used the AlTER TABLE function:
 
 ```
 ALTER TABLE watch_history
