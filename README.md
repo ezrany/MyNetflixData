@@ -106,7 +106,11 @@ GROUP BY category
 ORDER BY Count DESC;
 ```
 
-This showed that I watched more TV shows than movies on Netflix. I also wanted to see if my viewing trend had decreased over time. To do this, I used the following code:
+This showed that I watched more TV shows than movies on Netflix:
+https://github.com/ezrany/MyNetflixData/blob/main/MySQL%20Workbench%20Images/WatchTimeByYear.png
+
+
+I also wanted to see if my viewing trend had decreased over time. To do this, I used the following code:
 
 ```sql
 SELECT YEAR(date) AS year,
