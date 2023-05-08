@@ -27,10 +27,10 @@ The first step was to import the data into MySQL. I created a new Schema called 
 
 However, the data provided by Netflix is quite limited, as they only give you the title of the program and the date it was watched. I needed each movie to have a unique reference, so I created a new column called 'ID' using the auto-increment function and used it as the primary key. To do this, I used the following code:
 
-'''sql
+```sql
 ALTER TABLE watch_history
 ADD COLUMN id INT NOT NULL auto_increment PRIMARY KEY;
-'''
+``
 
 To expand the dataset, I added a new column called 'category.' I set the parameters for this column to classify titles containing 'series,' 'chapter,' 'season,' 'part,' or 'episode' as TV shows, and everything else as a movie. To create a new column and populate it, I used the following codes:
 
