@@ -14,4 +14,11 @@ Netflix provides users with the ability to download their watch history from the
 
 5.Added additional data columns to expand the dataset. 
 
+## Findings
+Based on my history I have predominately watched more shows than movies on Netflix. 
+
+My vieweship has decreased over the years with the highest points of viewrship being during the Covid 19 pandemic. 
+
+Maybe I should cancel my subscription.
+
 
