@@ -100,7 +100,7 @@ END;
 After preparing the data, I conducted some analysis. To see which category I watched the most, I used the following code:
 
 ```sql
-SELECT category, COUNT(*) as Count
+SELECT category, FORMAT(COUNT(*), 0) as Count
 FROM watch_history
 GROUP BY category
 ORDER BY Count DESC;
@@ -109,9 +109,8 @@ ORDER BY Count DESC;
 This showed that I watched more TV shows than movies on Netflix. I also wanted to see if my viewing trend had decreased over time. To do this, I used the following code:
 
 ```sql
-SELECT
-YEAR(date) AS year,
-SUM(CASE WHEN category = 'Movie' THEN 101 ELSE 42 END) AS watch_time_minutes
+SELECT YEAR(date) AS year,
+FORMAT(SUM(CASE WHEN category = 'Movie' THEN 101 ELSE 42 END), 0) AS watch_time_minutes
 FROM watch_history
 GROUP BY YEAR(date)
 ORDER BY year;
