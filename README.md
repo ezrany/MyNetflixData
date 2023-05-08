@@ -32,7 +32,7 @@ ALTER TABLE watch_history
 ADD COLUMN id INT NOT NULL auto_increment PRIMARY KEY;
 ```
 
-To expand the dataset, I added a new column called 'category.' I set the parameters for this column to classify titles containing 'series,' 'chapter,' 'season,' 'part,' or 'episode' as TV shows, and everything else as a movie. To create a new column and populate it, I used the AlTER TABLE function:
+To expand the dataset, I added a new column called 'category.' I set the parameters for this column to classify titles containing 'series,' 'chapter,' 'season,' 'part,' or 'episode' as TV shows, and everything else as a movie. To create a new column and populate it, I used the ALTER TABLE function:
 
 ```sql
 ALTER TABLE watch_history
