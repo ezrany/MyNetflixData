@@ -34,12 +34,12 @@ ADD COLUMN id INT NOT NULL auto_increment PRIMARY KEY;
 
 To expand the dataset, I added a new column called 'category.' I set the parameters for this column to classify titles containing 'series,' 'chapter,' 'season,' 'part,' or 'episode' as TV shows, and everything else as a movie. To create a new column and populate it, I used the AlTER TABLE function:
 
-```
+```sql
 ALTER TABLE watch_history
 ADD COLUMN category VARCHAR(20);
 ```
 
-```
+```sql
 UPDATE watch_history
 SET category =
 CASE
@@ -55,12 +55,12 @@ END;
 
 I also added a new column for runtime, using an average runtime of 101 minutes for movies and 42 minutes for TV shows, as I didn't have an exact runtime for each program. I used the following code to create and populate the column:
 
-```
+```sql
 ALTER TABLE watch_history
 ADD COLUMN runtime INT;
 ```
 
-```
+```sql
 UPDATE watch_history
 SET runtime =
 CASE
@@ -72,7 +72,7 @@ END;
 
 After preparing the data, I conducted some analysis. To see which category I watched the most, I used the following code:
 
-```
+```sql
 SELECT category, COUNT(*) as Count
 FROM watch_history
 GROUP BY category
@@ -81,7 +81,7 @@ ORDER BY Count DESC;
 
 This showed that I watched more TV shows than movies on Netflix. I also wanted to see if my viewing trend had decreased over time. To do this, I used the following code:
 
-```
+```sql
 SELECT
 YEAR(date) AS year,
 SUM(CASE WHEN category = 'Movie' THEN 101 ELSE 42 END) AS watch_time_minutes
