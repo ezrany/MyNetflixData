@@ -4,12 +4,14 @@
 Netflix provides users with the ability to download their watch history from the inception of their account. I downloaded my watch history in order to analyse it.
 
 ## Steps take to process this data
-Export data from Netflix account
+1.Export data from Netflix account
 
-Create a new schema on MySQL Workbench
+2.Create a new schema on MySQL Workbench
 
-Create a new table within the created schema
+3.Create a new table within the created schema
 
-Import data from Netflix into the table
+4.Import data from Netflix into the table
 
-Add additional data columns to expand the dataset. 
+5.Add additional data columns to expand the dataset. 
+
+
