@@ -38,7 +38,7 @@ CREATE TABLE watch_history (
 
 ### Output:
 
-![Schema and Table]([](https://github.com/ezrany/MyNetflixData/blob/main/MySQL%20Workbench%20Images/Screenshot%202023-05-08%20at%2011.28.31.png))
+![Schema and Table](https://github.com/ezrany/MyNetflixData/blob/main/MySQL%20Workbench%20Images/Screenshot%202023-05-08%20at%2011.28.31.png)
 
 However, the data provided by Netflix is quite limited, as they only give you the title of the program and the date it was watched. I needed each movie to have a unique reference, so I created a new column called 'ID' using ALTER TABLE and added a unique id that will also function as a primary key using the  the AUTO-INCREMENT function:
 
