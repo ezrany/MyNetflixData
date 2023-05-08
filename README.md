@@ -29,8 +29,6 @@ The first step was to import the data into MySQL. I created a new Schema called 
 CREATE SCHEMA MyNetflixData;
 ```
 
-### Output:
-
 ```sql
 CREATE TABLE watch_history (
   title VARCHAR(255) NOT NULL,
@@ -40,7 +38,7 @@ CREATE TABLE watch_history (
 
 ### Output:
 
-INSERT IMAGE OF SCHEMA AND TABLE
+![Schema and Table](Dragster.jpg)
 
 However, the data provided by Netflix is quite limited, as they only give you the title of the program and the date it was watched. I needed each movie to have a unique reference, so I created a new column called 'ID' using ALTER TABLE and added a unique id that will also function as a primary key using the  the AUTO-INCREMENT function:
 
@@ -69,6 +67,8 @@ THEN 'TV Show'
 ELSE 'Movie'
 END;
 ```
+
+
 
 I also added a new column for runtime, using an average runtime of 101 minutes for movies and 42 minutes for TV shows, as I didn't have an exact runtime for each program. I used the following code to create and populate the column:
 
