@@ -15,11 +15,7 @@ Netflix provides users with the ability to download their watch history from the
 5. Added additional data columns to expand the dataset. 
 
 ## Findings
-Based on my history I have predominately watched more shows than movies on Netflix. 
-
-My watch time has decreased over the years with the highest points of viewership being during the Covid 19 pandemic. 
-
-I may need to cancel my Netflix subscription.
+Looking at my Netflix viewing history, it's clear that I've watched more shows than movies. Over time, my total watch time has decreased, with the peak being during the Covid-19 pandemic. Despite my past enjoyment of the service, I may now consider cancelling my Netflix subscription due to low utilisation.
 
 ## Process
 
