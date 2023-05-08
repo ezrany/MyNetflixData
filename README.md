@@ -34,9 +34,12 @@ ADD COLUMN id INT NOT NULL auto_increment PRIMARY KEY;
 
 To expand the dataset, I added a new column called 'category.' I set the parameters for this column to classify titles containing 'series,' 'chapter,' 'season,' 'part,' or 'episode' as TV shows, and everything else as a movie. To create a new column and populate it, I used the following codes:
 
+```
 ALTER TABLE watch_history
 ADD COLUMN category VARCHAR(20);
+```
 
+```
 UPDATE watch_history
 SET category =
 CASE
@@ -48,12 +51,16 @@ or title LIKE'%episode%'
 THEN 'TV Show'
 ELSE 'Movie'
 END;
+```
 
 I also added a new column for runtime, using an average runtime of 101 minutes for movies and 42 minutes for TV shows, as I didn't have an exact runtime for each program. I used the following code to create and populate the column:
 
+```
 ALTER TABLE watch_history
 ADD COLUMN runtime INT;
+```
 
+```
 UPDATE watch_history
 SET runtime =
 CASE
@@ -61,22 +68,27 @@ WHEN category = 'Tv Show' THEN 42
 WHEN category = 'Movie' THEN 101
 ELSE NULL
 END;
+```
 
 After preparing the data, I conducted some analysis. To see which category I watched the most, I used the following code:
 
+```
 SELECT category, COUNT(*) as Count
 FROM watch_history
 GROUP BY category
 ORDER BY Count DESC;
+```
 
 This showed that I watched more TV shows than movies on Netflix. I also wanted to see if my viewing trend had decreased over time. To do this, I used the following code:
 
+```
 SELECT
 YEAR(date) AS year,
 SUM(CASE WHEN category = 'Movie' THEN 101 ELSE 42 END) AS watch_time_minutes
 FROM watch_history
 GROUP BY YEAR(date)
 ORDER BY year;
+```
 
 The outcome showed a declining viewing trend since the high viewing figures of 2020 and 2021. Perhaps it's time to cancel my subscription.
 
