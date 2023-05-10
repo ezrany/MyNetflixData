@@ -19,7 +19,7 @@ Looking at my Netflix viewing history, it's clear that I've watched more shows t
 
 ## Process
 
-The first step was to import the data into MySQL. I created a new Schema called 'MyNetflixData' and within that schema, I created a new table called 'watchhistory' to store my data.
+The first step was to import the data into MySQL. I created a new Schema called 'MyNetflixData' and within that schema, I created a new table called 'watch_history' to store my data.
 
 ```sql
 CREATE SCHEMA MyNetflixData;
